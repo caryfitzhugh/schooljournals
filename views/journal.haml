@@ -33,17 +33,18 @@
       .clear
       .lines
         - if @chores[date.wday][:chores] && @chores[date.wday][:chores].length > 0
-          %ul.chores
-            %li.header
-              Chores
-            - @chores[date.wday][:chores].each do |chore|
-              %li
-                .checkbox
-                .chore= chore
-            - 5.times do
-              %li
-                .checkbox
-                .chore.unknown
+          .chores-wrapper
+            %ul.chores
+              %li.header
+                Chores
+              - @chores[date.wday][:chores].each do |chore|
+                %li
+                  .checkbox
+                  .chore= chore
+              - 5.times do
+                %li
+                  .checkbox
+                  .chore.unknown
         - 500.times do
           %li.line
 

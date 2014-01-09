@@ -28,15 +28,21 @@ textarea {
 fieldset {
   margin: 20px 10px;
 }
-.chores {
+.chores-wrapper
   float: right;
+  background: white;
+  padding: 0 0 15px 15px;
+  width: 20%;
+}
+
+.chores {
   margin: 10px;
   margin-right: 0px;
   border: 1px solid #bbb;
   background: #ddd;
   padding: 10px;
   list-style-type: none;
-  width: 20%;
+  width: 100%;
 
   li {
     .checkbox {
