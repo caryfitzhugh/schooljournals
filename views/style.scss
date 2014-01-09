@@ -58,6 +58,9 @@ fieldset {
     display: inline;
     position: relative;
     top: -7px;
+    &.unknown {
+      border-bottom: 1px solid black;
+    }
    }
   }
 }
