@@ -60,6 +60,8 @@ fieldset {
     top: -7px;
     &.unknown {
       border-bottom: 1px solid black;
+      display: inline-block;
+      width: 80%;
     }
    }
   }
