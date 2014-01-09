@@ -1,0 +1,66 @@
+- # Cover / Title Page
+.page.title
+  %h1= @name
+  %h3= @subtitle
+
+- if @student_notes
+  .page
+    .notes
+      = @student_notes
+
+- # Table of contents
+.page
+  %h1 Table Of Contents
+  #toc
+
+- # Journaling!
+- @journal_dates.each do |date|
+  - if @chores[date.wday][:visible]
+    .page
+      = page_number(:journal, date.strftime("%d %B") )
+      .date
+        .day= date.strftime("%A")
+        .number=date.strftime("%d")
+        .month=date.strftime("%B")
+        .year=date.strftime("%Y")
+      .clear
+      - if @verses.length > 0
+        - verse = @verses.shift
+        - @verses.push(verse)
+        .verse
+          = verse[:verse]
+          .ref= verse[:ref]
+      .clear
+      .lines
+        - 500.times do
+          %li.line
+        - if @chores[date.wday][:chores] && @chores[date.wday][:chores].length > 0
+          %ul.chores
+            %li.header
+              Chores
+            - @chores[date.wday][:chores].each do |chore|
+              %li
+                .checkbox
+                .chore= chore
+
+- # Book List
+- @books.each do |book|
+  .page
+    = page_number(:books, book)
+    %h1= book
+
+#hidden_toc{:style=>"display:none"}
+  %ul.toc
+    - heading = nil
+    - @pages.each_with_index do |page, i|
+      - if (heading != page.first)
+        %li.heading
+          = page.first.to_s
+          - heading = page.first
+
+      %li.listing
+        .toc-page-number= i+1
+        = page.last
+
+:javascript
+  $("#toc").html($("#hidden_toc").html());

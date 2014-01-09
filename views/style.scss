@@ -1,4 +1,10 @@
+@media print
+{
+      * {-webkit-print-color-adjust:exact;}
+    }
+
 body {
+  font-family: 'Josefin Slab', serif;
 	a {
 		text-decoration: none;
 	}
@@ -7,4 +13,170 @@ body {
 .container {
 	width: 960px;
 	margin: 0 auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+textarea {
+  height: 200px;
+  width:  100%;
+}
+fieldset {
+  margin: 20px 10px;
+}
+.chores {
+  float: right;
+  margin: 10px;
+  border: 1px solid #bbb;
+  background: #ddd;
+  padding: 10px;
+  list-style-type: none;
+  width: 20%;
+
+  li {
+    .checkbox {
+      width: 15px;
+      height: 15px;
+      background: white;
+      border: 1px solid black;
+      border-radius: 2px;
+      margin: 5px;
+      display: inline-block;
+   }
+   &.header {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 8px;
+   }
+   .chore {
+    display: inline;
+    position: relative;
+    top: -7px;
+   }
+  }
+}
+
+.page {
+  font-family: 'Asap', sans-serif;
+  &.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+    font-family: 'Josefin Slab', serif;
+    p {
+      font-weight: lighter;
+      font-size: 20px;
+    }
+  }
+  display: block;
+  page-break-after: always;
+  height: 1100px;
+  width:  850px;
+}
+.toc {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  li {
+    float: left;
+    display: block;
+    width: 48%;
+  }
+  .listing {
+    padding: 4px;
+    border-bottom: 1px dotted #999;
+    margin: 2px;
+    margin-right: 6px;
+  }
+  .heading {
+    width: 100%;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin: 8px;
+ }
+ .toc-page-number {
+    float: right;
+    font-weight: lighter;
+    color: #999;
+ }
+}
+.clear:before,
+.clear:after {
+      content: " ";
+          display: table;
+        }
+
+        .clear:after {
+              clear: both;
+            }
+.page {
+  overflow: hidden;
+  /* Set the background */
+  background-color: #fff;
+  .lines {
+    height: 100%;
+    width: 100%;
+    margin-top: 60px;
+    li.line {
+      border-bottom: 1px solid #555;
+      display: block;
+      width: 100%;
+      height: 30px;
+    }
+  }
+
+
+
+  h1 {
+    text-align: center;
+  }
+  position: relative;
+  .verse {
+    position: relative;
+    display: block;
+    font-style: italic;
+    font-weight: 100;
+    margin: 10px;
+    .ref {
+      font-weight: bold;
+      font-style: normal;
+      position: absolute;
+      right: 0;
+      line-height: 14px;
+      font-size: 14px;
+      bottom: -22px;
+      padding: 3px;
+    }
+    border: 1px solid #bbb;
+    background: #ddd;
+    padding: 10px;
+  }
+  .date {
+    float: right;
+    .number, .month, .year {
+      display: inline;
+      padding: 3px 0px;
+    }
+
+    .day {
+      text-align: right;
+      display: block;
+      font-size: 24px;
+    }
+  }
+  .page-number {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+    padding: 10px;
+    width: 100%;
+    text-align: right;
+  }
 }
