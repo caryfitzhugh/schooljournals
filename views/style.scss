@@ -74,6 +74,9 @@ fieldset {
   }
   display: block;
   page-break-after: always;
+  &.height-less {
+    height: auto;
+  }
   height: 1100px;
   width:  850px;
 }
