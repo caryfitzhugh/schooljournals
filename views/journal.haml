@@ -32,8 +32,6 @@
           .ref= verse[:ref]
       .clear
       .lines
-        - 500.times do
-          %li.line
         - if @chores[date.wday][:chores] && @chores[date.wday][:chores].length > 0
           %ul.chores
             %li.header
@@ -42,6 +40,8 @@
               %li
                 .checkbox
                 .chore= chore
+        - 500.times do
+          %li.line
 
 - # Book List
 - @books.each do |book|
