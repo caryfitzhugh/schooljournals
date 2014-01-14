@@ -46,13 +46,17 @@
                   .checkbox
                   .chore.unknown
         - 500.times do
-          %li.line
+          .line
 
 - # Book List
 - @books.each do |book|
   .page
     = page_number(:books, book)
     %h1= book
+    .lines
+    - 500.times do
+      .line
+
 
 #hidden_toc{:style=>"display:none"}
   %ul.toc
