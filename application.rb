@@ -7,6 +7,7 @@ require 'date'
 require 'scripture_lookup'
 
 set :haml, :format => :html5
+set :bind, '0.0.0.0'
 
 get '/' do
   haml :inputs
@@ -56,8 +57,10 @@ post '/' do
       }
   }
   provider = ScriptureLookup.new
+
   @verses = params["verse_list"].split("\n").map(&:strip).map do |ref|
-    {:verse => provider.lookup(ref, :NASB), :ref => ref}
+    verse = provider.lookup(ref, :NASB).response_data[:content].to_a.first[1][:verse].first
+    {:verse => verse, :ref => ref}
   end.sort {rand}
 
   @pages = []

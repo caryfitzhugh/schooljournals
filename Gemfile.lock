@@ -1,7 +1,15 @@
+GIT
+  remote: git@github.com:caryfitzhugh/scripture_lookup.git
+  revision: c6b91d4b085f97e296ff925a6804a2147942bac2
+  specs:
+    scripture_lookup (0.0.3)
+      loofah (~> 1.2.1)
+      metainspector (~> 1.15.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
-    addressable (2.3.5)
+    addressable (2.3.6)
     backports (3.4.0)
     chunky_png (1.2.9)
     compass (0.12.2)
@@ -20,10 +28,10 @@ GEM
       nokogiri (~> 1.5)
       open_uri_redirections (~> 0.1.0)
       rash (~> 0.4.0)
-    mini_portile (0.5.2)
+    mini_portile (0.6.0)
     multi_json (1.8.2)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
     open_uri_redirections (0.1.4)
     rack (1.5.2)
     rack-protection (1.5.1)
@@ -33,9 +41,6 @@ GEM
     rash (0.4.0)
       hashie (~> 2.0.0)
     sass (3.2.13)
-    scripture_lookup (0.0.3)
-      loofah (~> 1.2.1)
-      metainspector (~> 1.15.0)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -57,6 +62,6 @@ DEPENDENCIES
   haml
   json
   sass
-  scripture_lookup
+  scripture_lookup!
   sinatra
   sinatra-contrib
