@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:caryfitzhugh/scripture_lookup.git
+  remote: git://github.com/caryfitzhugh/scripture_lookup.git
   revision: c6b91d4b085f97e296ff925a6804a2147942bac2
   specs:
     scripture_lookup (0.0.3)
