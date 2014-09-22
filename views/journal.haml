@@ -63,7 +63,7 @@
     - heading = nil
     - @pages.each_with_index do |page, i|
       - if (heading != page.first)
-        %li.heading
+        %li.heading{:style => "break-before: always"}
           = page.first.to_s
           - heading = page.first
 
