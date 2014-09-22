@@ -7,7 +7,7 @@ GIT
       metainspector (~> 1.15.0)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     addressable (2.3.6)
     backports (3.4.0)
