@@ -10,8 +10,12 @@
 
 - # Table of contents
 .page.height-less
-  %h1 Table Of Contents
+  %h1 Book List
   #toc
+    %ul.toc
+      - @books.each_with_index do |book, i|
+        %li.listing
+          = book
 
 - # Journaling!
 - @journal_dates.each do |date|
@@ -34,6 +38,9 @@
       .lines
         - if @chores[date.wday][:chores] && @chores[date.wday][:chores].length > 0
           .chores-wrapper
+            %div.daily-grade
+              %span.label Grade
+              %span.grade &nbsp;
             %ul.chores
               %li.header
                 To-Do
@@ -48,6 +55,9 @@
         - 500.times do
           .line
 
+.page
+  %h1 Book Reports
+
 - # Book List
 - @books.each do |book|
   .page
@@ -56,20 +66,3 @@
     .lines
       - 500.times do
         .line
-
-
-#hidden_toc{:style=>"display:none"}
-  %ul.toc
-    - heading = nil
-    - @pages.each_with_index do |page, i|
-      - if (heading != page.first)
-        %li.heading{:style => "break-before: always"}
-          = page.first.to_s
-          - heading = page.first
-
-      %li.listing
-        .toc-page-number= i+1
-        = page.last
-
-:javascript
-  $("#toc").html($("#hidden_toc").html());

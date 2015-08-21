@@ -195,3 +195,24 @@ fieldset {
     text-align: right;
   }
 }
+
+.daily-grade {
+    margin: 10px;
+    margin-right: 0px;
+    border: 1px solid #bbb;
+    background: #ddd;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 40px;
+    .label {
+
+    }
+    .grade {
+      border-bottom: 1px solid black;
+      border: 1px solid black;
+      display: inline-block;
+      width: 50px;
+      float: right;
+      background: white;
+    }
+  }
